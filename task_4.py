@@ -5,7 +5,7 @@ def info(data):
         print()
 
 
-def border_map(a, b):
+def border_map(poziom, pion):
 
     answer = []
 
