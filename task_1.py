@@ -1,21 +1,14 @@
-def my_split(text):
+import math
+def is_palindrome(text):
 
-    answer=[]
-    flag = 0
-    string = ""
+    text = text.lower()
+    text = text.split(" ")
+    text = "".join(text)
 
-    for i in range(len(text)):
+    for i in range(1, math.floor((len(text) + 1)/2)):
 
-        if text[i] != " ":
-            string += text[i]
-            flag = 1
+        if text[i-1] != text[-i]:
+            return False
+            break
 
-        elif text[i] == " " and string != "":
-            answer.append(string)
-            string = ""
-            flag = 0
-
-    if flag == 1:
-        answer.append(string)
-
-    return answer
+    return True
