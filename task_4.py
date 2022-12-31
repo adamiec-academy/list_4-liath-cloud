@@ -5,5 +5,24 @@ def info(data):
         print()
 
 
-def border_map(a, b):
-    return [['.']]
+def border_map(pion, poziom):
+
+    answer = []
+
+    for i in range(poziom):
+
+        part_answer = []
+
+        if i == 0 or i == poziom - 1:
+            for k in range(pion):
+                part_answer.append("X")
+
+        else:
+            part_answer.append("X")
+            for k in range(pion - 2):
+                part_answer.append(".")
+
+            part_answer.append("X")
+
+        answer.append(part_answer)
+    return answer
